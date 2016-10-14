@@ -10,9 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "assert": "^1.4.1",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "connect": "^3.5.0",
     "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-alpha.1",
     "dotenv": "^2.0.0",
     "ejs": "^2.5.2",
     "fs": "0.0.1-security",
@@ -21,5 +23,13 @@
     "request": "^2.74.0"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidbpaul/project2-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidbpaul/project2-2/issues"
+  },
+  "homepage": "https://github.com/davidbpaul/project2-2#readme",
   "description": ""
 }

@@ -1,1 +1,8 @@
-<h1> DATABASE </h1>
+
+<% if (username) { %>
+<p>logged in as: <%= user %></p>
+<form method="POST" action="/logout"> <button>Logout</button></form>
+<% } else { %>
+<a href ="http://localhost:8080/register">Register</a>
+<a href ="http://localhost:8080/login">Login</a>
+<% } %>

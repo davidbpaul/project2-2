@@ -1,20 +1,20 @@
 <!DOCTYPE html>
   <html lang="en">
     <body style = "background-color: lightblue">
-      <h1>Short URL</h1>
+    <% include partials/_header %>
       <table>
-
       <tr>
         <td><%= shortURL %></td>
-        <td>---></td>
-       <form action="/urls/<%= shortURL %>" method="POST" style="margin:150px;">
+        <td>&rarr;</td>
+      <form action="/urls/<%= shortURL %>" method="POST" style="margin:150px;">
         <label for="longURL">Update a URL:</label>
-        <input id="longURL" type="text" name="longURL" placeholder="<%= longURL %>" style="width: 300px">
+        <input id="longURL" type="text" name="longURL" placeholder="<%= longURL.url%>" style="width: 300px">
         <input type="submit" value="Update">
       </form>
-      <td><a href="http://localhost:8080/<%= shortURL %>"><%= longURL %></a></td>
+      <td><a href="http://localhost:8080/<%= shortURL %>"><%= longURL.url %></a></td>
       </tr>
-       <a href ="http://localhost:8080/urls/">Return</a>
+      <a href ="http://localhost:8080/urls/"><button>Home</button></a>
+      <a href ="http://localhost:8080/home"><button>Profile</button></a>
       </table>
     </body>
   </html>

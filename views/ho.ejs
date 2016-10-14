@@ -2,17 +2,17 @@
   <html lang="en">
     <body style = "background-color: lightblue">
       <a href ="http://localhost:8080/urls/new"><button>Create</button></a>
-      <a href ="http://localhost:8080/home"><button>Profile</button></a>
+      <a href ="http://localhost:8080/urls"><button>Home</button></a>
       <% include partials/_header %>
       <div class = urls>
         <%for(url in urls){ %>
-          <div id = url style = "background-color:lightblue; width: 450px; display:flex; justify-content: flex-start;">
+         <div id = url style = "background-color:lightblue; width: 450px; display:flex; justify-content: flex-start;">
             <p><%= `${url} ` %> &rarr;<a href="http://localhost:8080/<%= `${url}`  %>"> <%= `${urls[url].url}` %></a></p>
             <td></td>
             <a href ="http://localhost:8080/urls/<%= url %>" style = "float:right;padding: 16.5px">Edit</a>
             <form method="POST" action="/urls/<%= url %>/delete" style = "padding: 16.5px"><button>Delete</button></form>
-          </div>
-             <% } %>
+         </div>
+            <% } %>
       </div>
     </body>
   </html>
